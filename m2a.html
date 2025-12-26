@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>A Jar of Duas</title>
+  <style>
+    body {
+      background: linear-gradient(to bottom, #f9fafb, #eef2f7);
+      font-family: 'Georgia', serif;
+      text-align: center;
+      padding: 40px;
+      color: #333;
+    }
+    h1 {
+      font-weight: normal;
+      margin-bottom: 10px;
+    }
+    p {
+      max-width: 500px;
+      margin: 0 auto 30px;
+      font-size: 16px;
+    }
+    .jar {
+      font-size: 100px;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+    .jar:hover {
+      transform: scale(1.05);
+    }
+    .note {
+      margin-top: 30px;
+      font-size: 18px;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      min-height: 60px;
+    }
+    footer {
+      margin-top: 50px;
+      font-size: 13px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>A Jar of Duas 🤍</h1>
+  <p>
+    Pick one whenever you feel like it.  
+    Some reminders are meant to find us at the right time.
+  </p>
+
+  <div class="jar" onclick="pickMessage()">🫙</div>
+
+  <div class="note" id="note">
+    Click the jar to pick a dua.
+  </div>
+
+  <footer>
+    May Allah fill your days with ease and barakah.
+  </footer>
+
+  <script>
+    const messages = [
+      "The Prophet ﷺ said: “A woman who dies while she is faithful and conscious of Allah will enter Paradise. May Allah grant you paradise Ameen 🤍",
+      "The Prophet ﷺ said: 'The best among you are those with the best character.' May Allah preserve the beauty of your character.",
+      "May Allah grant you peace that doesn’t depend on circumstances, and joy that doesn’t go away.",
+      "Sometimes Allah delays things because He is preparing something better. Trust His timing it’s always kind.",
+      "May Allah surround you with people who make life lighter and hearts happier.",
+      "The Prophet ﷺ said: 'Allah is gentle and loves gentleness.' May gentleness always remain part of you.",
+      "Indeed with Hardship comes ease (94:6). Always trust Allah and his plans.",
+      "Every good intention you carry,may Allah multiply its reward beyond what you imagine.",
+      "May Allah make your coming year a means of growth, clarity, and happiness.",
+      "Ameen to all the duas you whisper when no one else hears."
+    ];
+
+    function pickMessage() {
+      const random = Math.floor(Math.random() * messages.length);
+      document.getElementById("note").innerText = messages[random];
+    }
+  </script>
+
+</body>
+</html>
